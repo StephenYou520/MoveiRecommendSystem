@@ -1,10 +1,18 @@
 package com.stephenyou.dataloader
 
 
+import java.net.InetAddress
+
 import com.mongodb.casbah.commons.MongoDBObject
 import com.mongodb.casbah.{MongoClient, MongoClientURI}
 import org.apache.spark.{SparkConf, sql}
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.elasticsearch.action.admin.indices.create.CreateIndexRequest
+import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest
+import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsRequest
+import org.elasticsearch.common.settings.Settings
+import org.elasticsearch.common.transport.InetSocketTransportAddress
+import org.elasticsearch.transport.client.PreBuiltTransportClient
 
 /** *
   * Movie数据集字段通过 ^ 进行分割
@@ -59,7 +67,7 @@ case class MongoConfig(val uri: String, val db: String)
   * @param index          需要操作的索引
   * @param clustername    ES集群的名称
   */
-case class ESConfig(val httpHosts: String, val transportHosts: String, val index: String, val clustername: String)
+case class ESConfig (val httpHosts: String, val transportHosts: String, val index: String, val clustername: String)
 
 //数据的主加载服务
 object DataLoader {
@@ -117,10 +125,22 @@ object DataLoader {
     implicit val mongoConfig =MongoConfig(config.get("mongo.uri").get,config.get("mongo.db").get)
 
     //需要将数据保存在MongoDB中,我们封装一个
-    storeDataInMongoDB(movieDF,ratingDF,tagDF)
+    //storeDataInMongoDB(movieDF,ratingDF,tagDF)
 
     //需要将数据保存到ES中
-    //storDataInES()
+
+    import org.apache.spark.sql.functions._
+    /***
+      * MID, Tags
+      * 1    tag1|tag2|...
+      */
+
+    //将tag数据集中的mid和tag取出来
+    val newTag = tagDF.groupBy($"mid").agg(concat_ws("|",collect_set($"tag")).as("tags")).select("mid","tags")
+    //将newTag聚合到movie数据集中
+    implicit val esConfig = ESConfig(config.get("es.httpHosts").get,config.get("es.transportHosts").get,config.get("es.index").get,config.get("es.cluster.name").get)
+    val movieWithTagsDF=movieDF.join(newTag,Seq("mid","mid"),"left")
+    storeDataInES(movieWithTagsDF)
 
     //关闭spark
     spark.stop()
@@ -176,7 +196,35 @@ object DataLoader {
   }
 
   //将数据保存到ES中的方法
-  def storDataInES(): Unit = {
+  def storeDataInES(movieDF:DataFrame)(implicit esConfig:ESConfig): Unit = {
+    //新建一个配置
+    val settings:Settings=Settings.builder().put("cluster.name",esConfig).build()
+
+    //需要新建一个ES的客户端
+    val esClient= new PreBuiltTransportClient(settings)
+
+    //需要将transportHost添加到esClient中
+    val REGEX_HOST_PORT ="(.+):(\\d+)".r
+
+    esConfig.transportHosts.split(",").foreach{
+      case REGEX_HOST_PORT(host:String,port:String)=>{
+        esClient.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(host),port.toInt))
+      }
+    }
+    //需要清除ES中遗留的数据
+    if(esClient.admin().indices().exists(new IndicesExistsRequest(esConfig.index)).actionGet().isExists()){
+      esClient.admin().indices().delete(new DeleteIndexRequest(esConfig.index))
+    }
+    esClient.admin().indices().create(new CreateIndexRequest(esConfig.index))
+    //将数据写入到ES中
+    movieDF
+      .write
+      .option("es.nodes",esConfig.httpHosts)
+      .option("es.http.timeout","100m")
+      .option("es.mapping.id","mid")
+      .mode("overwrite")
+      .format("org.elasticsearch.spark.sql")
+      .save(esConfig.index+"/"+ES_MOVIE_INDEX)
 
   }
 

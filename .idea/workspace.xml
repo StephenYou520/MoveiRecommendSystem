@@ -17,20 +17,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/scala/com/stephenyou/dataloader/DataLoader.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+            <state relative-caret-position="387">
+              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
               <folding>
-                <element signature="e#36#83#0" expanded="true" />
+                <element signature="e#36#63#0" expanded="true" />
+                <element signature="n#!!doc;n#Movie#0;n#!!top" />
+                <element signature="n#!!doc;n#Rating#0;n#!!top" />
+                <element signature="n#!!doc;n#Tag#0;n#!!top" />
+                <element signature="n#!!doc;n#MongoConfig#0;n#!!top" />
+                <element signature="n#!!doc;n#ESConfig#0;n#!!top" />
+                <element signature="e#3845#5599#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://F:/Mywork/Maven/.m2/repository/org/mongodb/casbah-core_2.11/3.1.1/casbah-core_2.11-3.1.1.jar!/com/mongodb/casbah/MongoClient.class">
+        <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/resources/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="299">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1081">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -44,14 +59,21 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ESC</find>
+      <find>config</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/recommender/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/recommender/dataloader/pom.xml" />
         <option value="$PROJECT_DIR$/recommender/dataloader/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/recommender/dataloader/doc/readme.md" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/recommender/dataloader/src/main/resources/log4j2.xml" />
         <option value="$PROJECT_DIR$/recommender/dataloader/src/main/scala/com/stephenyou/dataloader/DataLoader.scala" />
       </list>
     </option>
@@ -86,6 +108,10 @@
           <item name="dataloader" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="MovieRecommendSystem" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
       </expand>
       <select />
     </treeState>
@@ -101,8 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,14 +145,59 @@
               <item name="recommender" type="462c0819:PsiDirectoryNode" />
               <item name="dataloader" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MovieRecommendSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieRecommendSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommender" type="462c0819:PsiDirectoryNode" />
+              <item name="dataloader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieRecommendSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieRecommendSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommender" type="462c0819:PsiDirectoryNode" />
+              <item name="dataloader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieRecommendSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieRecommendSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommender" type="462c0819:PsiDirectoryNode" />
+              <item name="dataloader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieRecommendSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieRecommendSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommender" type="462c0819:PsiDirectoryNode" />
+              <item name="dataloader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieRecommendSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieRecommendSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommender" type="462c0819:PsiDirectoryNode" />
+              <item name="dataloader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="dataloader" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576086692168" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576370628323" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -188,20 +257,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20087336" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="SOQL Query" />
-      <window_info anchor="bottom" id="Log Analyzer" />
-      <window_info anchor="bottom" id="Messages" weight="0.32936078" />
-      <window_info anchor="bottom" id="Anonymous Apex" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3261105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -209,11 +274,15 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Log Analyzer" order="10" />
+      <window_info anchor="bottom" id="SOQL Query" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32932165" />
+      <window_info anchor="bottom" id="Anonymous Apex" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.38059703" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.37991267" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -226,20 +295,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/recommend.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recommender/dataloader/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -257,29 +312,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/scala/com/stephenyou/dataloader/package.scala" />
     <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/resources/small/movies.csv">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/recommender/dataloader/doc/readme.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://F:/Mywork/Maven/.m2/repository/org/mongodb/casbah-core_2.11/3.1.1/casbah-core_2.11-3.1.1.jar!/com/mongodb/casbah/MongoClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="690">
           <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recommender/dataloader/src/main/scala/com/stephenyou/dataloader/DataLoader.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+        <state relative-caret-position="387">
+          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
           <folding>
-            <element signature="e#36#83#0" expanded="true" />
+            <element signature="e#36#63#0" expanded="true" />
+            <element signature="n#!!doc;n#Movie#0;n#!!top" />
+            <element signature="n#!!doc;n#Rating#0;n#!!top" />
+            <element signature="n#!!doc;n#Tag#0;n#!!top" />
+            <element signature="n#!!doc;n#MongoConfig#0;n#!!top" />
+            <element signature="n#!!doc;n#ESConfig#0;n#!!top" />
+            <element signature="e#3845#5599#0" />
           </folding>
         </state>
       </provider>

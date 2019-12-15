@@ -1,0 +1,15 @@
+2019-12-15 08:41:44 [main] INFO  PluginsService:175 - no modules loaded
+2019-12-15 08:41:44 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2019-12-15 08:41:44 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2019-12-15 08:41:44 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2019-12-15 08:41:44 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2019-12-15 08:41:44 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.transport.Netty3Plugin]
+2019-12-15 08:41:44 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2019-12-15 08:41:45 [main] WARN  TransportClientNodesService:420 - node {#transport#-1}{mEjVQkAJSwyuSj-EDXCCDg}{movie-re1}{192.168.12.141:9300} not part of the cluster Cluster [ESConfig(movie-re1:9200,movie-re1:9300,recommender,es-cluster)], ignoring...
+2019-12-15 08:42:33 [main] INFO  PluginsService:175 - no modules loaded
+2019-12-15 08:42:33 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2019-12-15 08:42:33 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2019-12-15 08:42:33 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2019-12-15 08:42:33 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2019-12-15 08:42:33 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.transport.Netty3Plugin]
+2019-12-15 08:42:33 [main] INFO  PluginsService:178 - loaded plugin [org.elasticsearch.transport.Netty4Plugin]
